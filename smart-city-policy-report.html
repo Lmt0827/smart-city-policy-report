@@ -961,7 +961,19 @@ td a:hover {
   <p class="en" style="margin-top:0.25rem">Data sourced from official government publications. All rights reserved.</p>
 </div>
 
-<script src="./assets/echarts.min.js"></script>
+<script>
+// Load ECharts with CDN fallback
+(function(){
+  var s = document.createElement('script');
+  s.src = './assets/echarts.min.js';
+  s.onerror = function(){
+    var cdn = document.createElement('script');
+    cdn.src = 'https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js';
+    document.head.appendChild(cdn);
+  };
+  document.head.appendChild(s);
+})();
+</script>
 <script src="./assets/charts.js"></script>
 
 <script>
