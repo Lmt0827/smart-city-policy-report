@@ -193,6 +193,19 @@
   .tag-national { background: #e74c3c; }
   .tag-province { background: #f39c12; }
   .tag-city { background: #27ae60; }
+  .rel-badge {
+    font-size: 0.7em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 4px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .rel-l1 { background: #c0392b; }
+  .rel-l2 { background: #d68910; }
+  .rel-l3 { background: #2471a3; }
   .meta-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -374,6 +387,7 @@
   <div class="doc-card national">
     <div class="doc-title">
       <span class="level-tag tag-national">国家级</span>
+      <span class="rel-badge rel-l1">L1·直接相关</span>
       <span>《关于加强新时代社会工作的意见》</span>
     </div>
     <div class="meta-grid">
@@ -393,6 +407,7 @@
   <div class="doc-card national">
     <div class="doc-title">
       <span class="level-tag tag-national">国家级</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《关于深入推进智慧社区建设的意见》</span>
     </div>
     <div class="meta-grid">
@@ -412,6 +427,7 @@
   <div class="doc-card national">
     <div class="doc-title">
       <span class="level-tag tag-national">国家级</span>
+      <span class="rel-badge rel-l3">L3·底座相关</span>
       <span>《"十四五"民政信息化发展规划》</span>
     </div>
     <div class="meta-grid">
@@ -431,6 +447,7 @@
   <div class="doc-card national">
     <div class="doc-title">
       <span class="level-tag tag-national">国家级</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《"十四五"城乡社区服务体系建设规划》</span>
     </div>
     <div class="meta-grid">
@@ -450,6 +467,7 @@
   <div class="doc-card national">
     <div class="doc-title">
       <span class="level-tag tag-national">国家级</span>
+      <span class="rel-badge rel-l1">L1·直接相关</span>
       <span>《"互联网+社会组织（社会工作、志愿服务）"行动方案（2018-2020年）》</span>
     </div>
     <div class="meta-grid">
@@ -469,6 +487,7 @@
   <div class="doc-card national">
     <div class="doc-title">
       <span class="level-tag tag-national">国家级</span>
+      <span class="rel-badge rel-l3">L3·底座相关</span>
       <span>《国务院关于加强数字政府建设的指导意见》</span>
     </div>
     <div class="meta-grid">
@@ -488,6 +507,7 @@
   <div class="doc-card national">
     <div class="doc-title">
       <span class="level-tag tag-national">国家级</span>
+      <span class="rel-badge rel-l3">L3·底座相关</span>
       <span>《民政部贯彻落实〈国务院关于加强数字政府建设的指导意见〉的实施方案》</span>
     </div>
     <div class="meta-grid">
@@ -514,6 +534,7 @@
   <div class="doc-card province">
     <div class="doc-title">
       <span class="level-tag tag-province">省级</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《四川省"十四五"城乡社区发展治理规划》</span>
     </div>
     <div class="meta-grid">
@@ -533,6 +554,7 @@
   <div class="doc-card province">
     <div class="doc-title">
       <span class="level-tag tag-province">省级</span>
+      <span class="rel-badge rel-l1">L1·直接相关</span>
       <span>《四川省"十四五"民政事业发展规划》</span>
     </div>
     <div class="meta-grid">
@@ -552,6 +574,7 @@
   <div class="doc-card province">
     <div class="doc-title">
       <span class="level-tag tag-province">省级</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《"互联网+社区"行动计划（2021-2025年）》</span>
     </div>
     <div class="meta-grid">
@@ -571,6 +594,7 @@
   <div class="doc-card province">
     <div class="doc-title">
       <span class="level-tag tag-province">省级</span>
+      <span class="rel-badge rel-l3">L3·底座相关</span>
       <span>《四川省"一网通办"三年行动方案》</span>
     </div>
     <div class="meta-grid">
@@ -597,6 +621,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">成都</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《成都市智慧社区建设导则》</span>
     </div>
     <div class="meta-grid">
@@ -616,6 +641,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">成都</span>
+      <span class="rel-badge rel-l1">L1·直接相关</span>
       <span>《2026年成都市社会工作智慧应用建设"揭榜挂帅"项目工作方案》</span>
     </div>
     <div class="meta-grid">
@@ -635,6 +661,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">绵阳</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《绵阳市社区治理促进条例》</span>
     </div>
     <div class="meta-grid">
@@ -654,6 +681,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">德阳</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《德阳市社区治理条例》</span>
     </div>
     <div class="meta-grid">
@@ -673,6 +701,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">遂宁</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《遂宁市"十四五"城乡基层治理规划》</span>
     </div>
     <div class="meta-grid">
@@ -692,6 +721,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">眉山</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《眉山市"十四五"城乡社区发展治理规划》</span>
     </div>
     <div class="meta-grid">
@@ -711,6 +741,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">广安</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《广安市人民政府关于推动城市高质量发展的实施意见》</span>
     </div>
     <div class="meta-grid">
@@ -730,6 +761,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">达州</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《达州市"十四五"数字经济发展专项规划（2021—2025年）》</span>
     </div>
     <div class="meta-grid">
@@ -749,6 +781,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">巴中</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《巴中市恩阳区"十四五"城乡社区发展治理规划》</span>
     </div>
     <div class="meta-grid">
@@ -768,6 +801,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">雅安</span>
+      <span class="rel-badge rel-l1">L1·直接相关</span>
       <span>《雅安市民政局 雅安市财政局关于组织实施2022年社会工作服务体系建设试点项目的通知》</span>
     </div>
     <div class="meta-grid">
@@ -787,6 +821,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">南充</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《南充市"十四五"城乡社区发展治理规划（2021—2025）》</span>
     </div>
     <div class="meta-grid">
@@ -806,6 +841,7 @@
   <div class="doc-card city">
     <div class="doc-title">
       <span class="level-tag tag-city">自贡</span>
+      <span class="rel-badge rel-l2">L2·场景相关</span>
       <span>《自贡市城乡社会治理网格化服务管理办法》</span>
     </div>
     <div class="meta-grid">
