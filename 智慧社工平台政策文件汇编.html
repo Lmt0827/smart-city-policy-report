@@ -71,6 +71,66 @@
     font-size: 1.3em;
   }
   .intro p { color: #555; font-size: 0.97em; }
+  .relevance-section {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 5px solid #9b59b6;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .relevance-section h2 {
+    color: #8e44ad;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+  }
+  .relevance-intro {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  .relevance-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .relevance-card {
+    padding: 18px 20px;
+    border-radius: 10px;
+    border-top: 4px solid;
+  }
+  .relevance-card.l1 { border-top-color: #e74c3c; background: #fef5f5; }
+  .relevance-card.l2 { border-top-color: #f39c12; background: #fefbf3; }
+  .relevance-card.l3 { border-top-color: #3498db; background: #f3f9fd; }
+  .relevance-card .layer {
+    font-weight: 700;
+    font-size: 1.02em;
+    margin-bottom: 6px;
+  }
+  .relevance-card.l1 .layer { color: #c0392b; }
+  .relevance-card.l2 .layer { color: #d68910; }
+  .relevance-card.l3 .layer { color: #2471a3; }
+  .relevance-card .layer-desc {
+    font-size: 0.88em;
+    color: #555;
+    line-height: 1.7;
+  }
+  .relevance-card .layer-files {
+    margin-top: 10px;
+    font-size: 0.83em;
+    color: #7f8c8d;
+    padding-top: 10px;
+    border-top: 1px dashed #dcdcdc;
+  }
+  .relevance-card .layer-files span {
+    display: inline-block;
+    background: rgba(255,255,255,0.7);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin: 2px 3px;
+    color: #555;
+  }
   .section-title {
     display: flex;
     align-items: center;
@@ -256,6 +316,43 @@
   <div class="intro">
     <h2>编制说明</h2>
     <p>本汇编围绕"智慧社工平台"主题，系统梳理了国家、四川省及四川省下辖各市州出台的与智慧社区、社会工作数字化、基层治理信息化相关的政策文件。每篇文件均包含<strong>文件名称、发文部门、发文时间、文号、原文下载/查看地址、文中处置部门及文件摘要</strong>。文件来源均为政府官方网站（.gov.cn），数据截止至2026年10月。</p>
+  </div>
+
+  <div class="relevance-section">
+    <h2>📌 政策关联性说明</h2>
+    <p class="relevance-intro">"智慧社工平台"并非孤立系统，而是嵌入在智慧社区、数字政府等更大的政策体系中。本汇编收录的23份文件与"智慧社工平台"的关联程度分为以下三个层次，读者可按需查阅：</p>
+    <div class="relevance-cards">
+      <div class="relevance-card l1">
+        <div class="layer">🔴 第一层：直接相关（社会工作信息化/智慧化）</div>
+        <div class="layer-desc">直接涉及社会工作的数字化平台建设，是智慧社工平台的核心政策依据。</div>
+        <div class="layer-files">
+          <span>"互联网+社会组织（社会工作、志愿服务）"行动方案</span>
+          <span>四川省"十四五"民政事业发展规划</span>
+          <span>雅安市社会工作服务体系建设试点通知</span>
+          <span>成都市社会工作智慧应用"揭榜挂帅"</span>
+        </div>
+      </div>
+      <div class="relevance-card l2">
+        <div class="layer">🟠 第二层：场景相关（智慧社区/基层治理）</div>
+        <div class="layer-desc">社会工作的主要服务场所在社区，智慧社区平台是社工开展服务的重要载体和数据底座。</div>
+        <div class="layer-files">
+          <span>关于深入推进智慧社区建设的意见</span>
+          <span>四川省"十四五"城乡社区发展治理规划</span>
+          <span>四川省"互联网+社区"行动计划</span>
+          <span>各市州智慧社区建设导则/条例</span>
+        </div>
+      </div>
+      <div class="relevance-card l3">
+        <div class="layer">🔵 第三层：底座相关（数字政府/一网通办）</div>
+        <div class="layer-desc">为智慧社工平台提供政务数据共享、身份认证、电子证照等底层技术支撑。</div>
+        <div class="layer-files">
+          <span>国务院关于加强数字政府建设的指导意见</span>
+          <span>"十四五"民政信息化发展规划</span>
+          <span>四川省"一网通办"三年行动方案</span>
+          <span>"十四五"城乡社区服务体系建设规划</span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="toc">
