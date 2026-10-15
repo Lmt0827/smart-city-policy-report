@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智慧社工平台相关政策文件汇编</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f0f4f8;
+    color: #2c3e50;
+    line-height: 1.7;
+  }
+  .header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    padding: 50px 20px 40px;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .header .subtitle {
+    font-size: 1.05em;
+    opacity: 0.9;
+    margin-bottom: 25px;
+  }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .stat-item {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 15px 28px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .stat-num {
+    font-size: 1.8em;
+    font-weight: 700;
+    display: block;
+  }
+  .stat-label {
+    font-size: 0.9em;
+    opacity: 0.9;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+  .intro {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 5px solid #2a5298;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .intro h2 {
+    color: #1e3c72;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+  }
+  .intro p { color: #555; font-size: 0.97em; }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 35px 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #2a5298;
+  }
+  .section-title .badge {
+    background: #2a5298;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+  }
+  .section-title h2 {
+    font-size: 1.5em;
+    color: #1e3c72;
+  }
+  .section-title .count {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-left: auto;
+  }
+  .doc-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid #3498db;
+  }
+  .doc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+  .doc-card.national { border-left-color: #e74c3c; }
+  .doc-card.province { border-left-color: #f39c12; }
+  .doc-card.city { border-left-color: #27ae60; }
+  .doc-title {
+    font-size: 1.15em;
+    font-weight: 700;
+    color: #1e3c72;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .doc-title .level-tag {
+    flex-shrink: 0;
+    font-size: 0.72em;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  .tag-national { background: #e74c3c; }
+  .tag-province { background: #f39c12; }
+  .tag-city { background: #27ae60; }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px 20px;
+    margin-bottom: 14px;
+    padding: 14px;
+    background: #f8fafc;
+    border-radius: 8px;
+  }
+  .meta-item {
+    font-size: 0.9em;
+  }
+  .meta-item .label {
+    color: #7f8c8d;
+    font-size: 0.82em;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .meta-item .value {
+    color: #2c3e50;
+    font-weight: 500;
+  }
+  .doc-summary {
+    font-size: 0.93em;
+    color: #555;
+    line-height: 1.75;
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    background: #fdfefe;
+    border-radius: 6px;
+    border: 1px solid #eef2f5;
+  }
+  .doc-summary strong { color: #1e3c72; }
+  .doc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #2980b9;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 6px 14px;
+    background: #ebf5fb;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  .doc-link:hover {
+    background: #d6eaf8;
+    text-decoration: underline;
+  }
+  .footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #95a5a6;
+    font-size: 0.85em;
+    border-top: 1px solid #e0e6ed;
+    margin-top: 40px;
+  }
+  .toc {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .toc h3 {
+    color: #1e3c72;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+  }
+  .toc ul {
+    list-style: none;
+    columns: 2;
+    column-gap: 30px;
+  }
+  .toc li {
+    padding: 4px 0;
+    font-size: 0.9em;
+  }
+  .toc a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  .toc a:hover { text-decoration: underline; }
+  @media (max-width: 768px) {
+    .header h1 { font-size: 1.5em; }
+    .stats { gap: 12px; }
+    .stat-item { padding: 10px 16px; }
+    .meta-grid { grid-template-columns: 1fr; }
+    .toc ul { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>智慧社工平台相关政策文件汇编</h1>
+  <div class="subtitle">国家级 · 四川省 · 各市州 政策文件汇总</div>
+  <div class="stats">
+    <div class="stat-item">
+      <span class="stat-num">23</span>
+      <span class="stat-label">政策文件总数</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">7</span>
+      <span class="stat-label">国家级文件</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">4</span>
+      <span class="stat-label">四川省级文件</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">12</span>
+      <span class="stat-label">市州级文件</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <h2>编制说明</h2>
+    <p>本汇编围绕"智慧社工平台"主题，系统梳理了国家、四川省及四川省下辖各市州出台的与智慧社区、社会工作数字化、基层治理信息化相关的政策文件。每篇文件均包含<strong>文件名称、发文部门、发文时间、文号、原文下载/查看地址、文中处置部门及文件摘要</strong>。文件来源均为政府官方网站（.gov.cn），数据截止至2026年10月。</p>
+  </div>
+
+  <div class="toc">
+    <h3>目录导航</h3>
+    <ul>
+      <li><a href="#national">一、国家级政策文件（7份）</a></li>
+      <li><a href="#province">二、四川省级政策文件（4份）</a></li>
+      <li><a href="#city">三、四川市州级政策文件（12份）</a></li>
+    </ul>
+  </div>
+
+  <!-- 国家级 -->
+  <div class="section-title" id="national">
+    <span class="badge">国家级</span>
+    <h2>一、国家级政策文件</h2>
+    <span class="count">共 7 份</span>
+  </div>
+
+  <div class="doc-card national">
+    <div class="doc-title">
+      <span class="level-tag tag-national">国家级</span>
+      <span>《关于加强新时代社会工作的意见》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">中共中央、国务院</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2026年7月23日</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>对加强新时代社会工作作出全面部署。要求健全党领导社会工作的体制机制，加强新兴领域党的建设，加强党建引领基层治理和基层政权建设，做好凝聚服务群众工作。强调<strong>用好信息化手段，推进智慧社区、数字乡村建设，完善群众诉求响应办理机制，推动社会工作数智化</strong>。统筹推进社会工作者队伍建设，发挥社区工作者、社会工作专业人员、志愿者等作用，提高社会工作专业化服务水平。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>党委社会工作部门统筹协调，相关部门协同配合，社会力量广泛参与；各级党委（党组）定期研究部署。
+    </div>
+    <a class="doc-link" href="https://www.gov.cn/zhengce/202607/content_7076433.htm" target="_blank">📄 查看原文（中国政府网）</a>
+  </div>
+
+  <div class="doc-card national">
+    <div class="doc-title">
+      <span class="level-tag tag-national">国家级</span>
+      <span>《关于深入推进智慧社区建设的意见》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">民政部、中央政法委、中央网信办、发展改革委、工信部、公安部、财政部、住建部、农业农村部（九部门）</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2022年</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">民发〔2022〕29号</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>明确智慧社区建设的总体要求、重点任务和保障措施。提出六大任务：<strong>集约建设智慧社区平台、拓展智慧社区治理场景、构筑社区数字生活新图景、推进大数据在社区应用、精简归并社区数据录入、加强智慧社区基础设施建设改造</strong>。到2025年基本构建起网格化管理、精细化服务、信息化支撑、开放共享的智慧社区服务平台。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>民政、政法、网络安全和信息化、发展改革、工业和信息化、公安、财政、住房城乡建设、农业农村等部门加强组织领导；乡镇（街道）、村（社区）做好数据采集整理。
+    </div>
+    <a class="doc-link" href="https://www.mca.gov.cn/gdnps/n2445/n2573/c116008/attr/262874.pdf" target="_blank">📄 下载原文PDF（民政部）</a>
+  </div>
+
+  <div class="doc-card national">
+    <div class="doc-title">
+      <span class="level-tag tag-national">国家级</span>
+      <span>《"十四五"民政信息化发展规划》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">民政部</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2021年12月23日</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">民发〔2021〕104号</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>到2025年全面形成与网络强国、数字中国、智慧社会建设相适应的民政信息化发展新局面。重点任务包括提升政务服务水平、增强业务应用能力。<strong>集约建设智慧社区综合信息平台</strong>，深化全国基层政权建设和社区治理信息系统应用，共建全国基层治理数据库，向村（社区）开放数据资源，支撑社会组织、社会工作者、志愿者提供专业化服务。建设民政大数据资源中心、人工智能平台等。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>民政部及各省、自治区、直辖市民政厅（局），各计划单列市民政局，新疆生产建设兵团民政局。
+    </div>
+    <a class="doc-link" href="https://www.mca.gov.cn/n1288/n1290/n1315/c39353/content.html" target="_blank">📄 查看原文（民政部）</a>
+  </div>
+
+  <div class="doc-card national">
+    <div class="doc-title">
+      <span class="level-tag tag-national">国家级</span>
+      <span>《"十四五"城乡社区服务体系建设规划》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">国务院办公厅</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2021年12月27日</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">国办发〔2021〕56号</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>明确"十四五"时期城乡社区服务体系建设的发展环境、总体要求、重点任务和保障措施。专章部署<strong>加快社区服务数字化建设</strong>，提高数字化政务服务效能，推动"互联网+政务服务"向乡镇（街道）、村（社区）延伸覆盖，实施"互联网+基层治理"行动，完善乡镇（街道）、村（社区）地理信息等基础数据。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>民政部牵头，国务院各部委、各直属机构，各省、自治区、直辖市人民政府协同落实。
+    </div>
+    <a class="doc-link" href="https://www.mca.gov.cn/gdnps/mobile/content.jsp?id=116816" target="_blank">📄 查看原文（民政部）</a>
+  </div>
+
+  <div class="doc-card national">
+    <div class="doc-title">
+      <span class="level-tag tag-national">国家级</span>
+      <span>《"互联网+社会组织（社会工作、志愿服务）"行动方案（2018-2020年）》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">民政部</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2018年9月3日</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">民发〔2018〕115号</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>推动"互联网+"在社会组织、社会工作、志愿服务、慈善募捐等领域健康发展。<strong>建设社会工作信息服务系统</strong>，加强数据收集，汇聚服务资源，掌握行业动态，辅助开展从业人员、服务机构管理。促进社会组织、专业社会工作、志愿服务健康有序发展，打造共建共治共享社会治理格局。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>民政部及各省、自治区、直辖市民政厅（局），各计划单列市民政局，新疆生产建设兵团民政局。
+    </div>
+    <a class="doc-link" href="https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5440873.htm" target="_blank">📄 查看原文（中国政府网）</a>
+  </div>
+
+  <div class="doc-card national">
+    <div class="doc-title">
+      <span class="level-tag tag-national">国家级</span>
+      <span>《国务院关于加强数字政府建设的指导意见》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">国务院</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2022年6月6日（成文）/ 6月23日（发布）</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">国发〔2022〕14号</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>就加强数字政府建设作出全面部署，明确构建<strong>协同高效的政府数字化履职能力体系、科学规范的制度体系、开放共享的数据资源体系、智能集约的平台支撑体系、全方位的安全保障体系</strong>。推进政府治理流程优化、模式创新和履职能力提升，为智慧社工平台建设提供顶层数字政府框架支撑。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>国务院各部委、各直属机构，地方各级人民政府。
+    </div>
+    <a class="doc-link" href="https://www.gov.cn/zhengce/zhengceku/2022-06/23/content_5697299.htm" target="_blank">📄 查看原文（中国政府网）</a>
+  </div>
+
+  <div class="doc-card national">
+    <div class="doc-title">
+      <span class="level-tag tag-national">国家级</span>
+      <span>《民政部贯彻落实〈国务院关于加强数字政府建设的指导意见〉的实施方案》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">民政部</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2022年</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>贯彻落实国务院关于加强数字政府建设的指导意见，结合民政工作实际，<strong>推进民政领域数字化转型</strong>，构建民政数字化履职能力体系，统筹推进民政数据资源共享开放，提升民政管理和服务数字化水平，为智慧社工平台建设提供民政领域的数字化实施路径。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>民政部及各级民政部门。
+    </div>
+    <a class="doc-link" href="https://www.mca.gov.cn/n2623/n2687/n2696/n2746/c116861/content.html" target="_blank">📄 查看原文（民政部）</a>
+  </div>
+
+  <!-- 四川省级 -->
+  <div class="section-title" id="province">
+    <span class="badge">省级</span>
+    <h2>二、四川省级政策文件</h2>
+    <span class="count">共 4 份</span>
+  </div>
+
+  <div class="doc-card province">
+    <div class="doc-title">
+      <span class="level-tag tag-province">省级</span>
+      <span>《四川省"十四五"城乡社区发展治理规划》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">四川省民政厅、中共四川省委组织部、中共四川省委政法委</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2021年12月10日</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>构建"党建引领+综合服务+综治保障+科技赋能"的城乡社区治理机制。专章部署<strong>推动科技赋能，加快社区信息技术运用</strong>，实施智慧社区场景营造，推进人工智能、大数据、5G、区块链等与社区治理及服务体系深度融合。全省33个县（市、区）开展智慧社区建设试点，城市社区公共服务综合信息平台覆盖率达75.8%。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>各市（州）民政局、党委组织部、党委政法委。
+    </div>
+    <a class="doc-link" href="http://mzt.sc.gov.cn/scmzt/ghjh/2022/1/19/41fc326739b24326b7d77068c60db014.shtml" target="_blank">📄 查看原文（四川省民政厅）</a>
+  </div>
+
+  <div class="doc-card province">
+    <div class="doc-title">
+      <span class="level-tag tag-province">省级</span>
+      <span>《四川省"十四五"民政事业发展规划》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">四川省民政厅、四川省发展和改革委员会</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2021年12月20日</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>统筹推进<strong>"智慧民政"建设</strong>，构建民政大数据资源中心，建设数据分析平台、综合支撑平台、统一业务经办平台、"互联网+监管"平台。发挥社会工作专业优势，<strong>推进乡镇（街道）社工站建设</strong>，打造枢纽型、立体型、综合型的社会工作和志愿服务平台载体，力争"十四五"末实现乡镇（街道）社会工作服务全覆盖，<strong>推广运用全国社会工作信息系统</strong>。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>各市（州）民政局、发展改革委。
+    </div>
+    <a class="doc-link" href="http://mzt.sc.gov.cn/scmzt/ghjh/2021/12/31/d1035b1a92f84d199707b60ccddddc36.shtml" target="_blank">📄 查看原文（四川省民政厅）</a>
+  </div>
+
+  <div class="doc-card province">
+    <div class="doc-title">
+      <span class="level-tag tag-province">省级</span>
+      <span>《"互联网+社区"行动计划（2021-2025年）》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">四川省民政厅（牵头，联合经济和信息化厅等6部门）</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2021年10月</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong><strong>全国从省级层面出台智慧社区建设规范的首例</strong>。以"互联网+"为创新引擎，着力培育信息化、智能化、智慧化的治理形态。明确"五大任务"和"十大场景"，以智慧党建、政务、自治、教育、健康、商业等智慧场景营造为重点，到2025年基本实现互联网、物联网、大数据、云计算、人工智能等信息技术在社区的广泛应用。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>四川省民政厅基层政权建设与社区治理处牵头，经济和信息化厅等6部门协同。
+    </div>
+    <a class="doc-link" href="http://mzt.sc.gov.cn/scmzt/wszj/2021/10/19/e29f8aeb8f614632861075ebee94c489.shtml" target="_blank">📄 查看原文（四川省民政厅）</a>
+  </div>
+
+  <div class="doc-card province">
+    <div class="doc-title">
+      <span class="level-tag tag-province">省级</span>
+      <span>《四川省"一网通办"三年行动方案》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">四川省人民政府办公厅</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2022年9月15日</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">川办发〔2022〕64号</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>实施民政退役军人"一网通办"提升工程，<strong>积极推进智慧民政建设，2025年9月底前建成全省统一的民政大数据平台</strong>。完善低收入人口数据采集，推进贫困对象识别精准化。加快建设全省统一、智慧泛在、便捷高效的网上政务服务体系，全面提升公共服务数字化、智能化水平。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>四川省民政厅等省政府各部门、各直属机构，各市（州）、县（市、区）人民政府。
+    </div>
+    <a class="doc-link" href="https://www.sc.gov.cn/10462/zfwjts/2022/9/15/579c2611d5fb400b885b6b82f8f0cfe3.shtml" target="_blank">📄 查看原文（四川省人民政府）</a>
+  </div>
+
+  <!-- 市州级 -->
+  <div class="section-title" id="city">
+    <span class="badge">市州级</span>
+    <h2>三、四川市州级政策文件</h2>
+    <span class="count">共 12 份</span>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">成都</span>
+      <span>《成都市智慧社区建设导则》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">中共成都市委社治委</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2022年11月23日</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>构建融合基层治理全要素的社区数据库，<strong>建成全市统一的村（社区）标准化管理平台和智慧社区综合应用平台</strong>。围绕社区党建、社区安全、社区治理、社区服务、社区发展5大板块，开放建设各类小微治理场景和特色工具。到2022年底示范打造50个智慧社区，到2025年底完成1000个智慧社区建设。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>成都市委社治委、各区（市）县党委社治委。
+    </div>
+    <a class="doc-link" href="http://cds.sczwfw.gov.cn/art/2022/11/23/art_15395_198874.html" target="_blank">📄 查看原文（成都市政务服务网）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">成都</span>
+      <span>《2026年成都市社会工作智慧应用建设"揭榜挂帅"项目工作方案》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">中共成都市委社会工作部</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2026年</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong><strong>深化成都市社会工作智慧治理建设</strong>，开展社会工作智慧应用建设"揭榜挂帅"项目，推动社会工作与人工智能、大数据等技术深度融合，提升社会工作服务智能化水平。经项目申报、综合评审，择优选出9个社会工作智慧应用项目。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>中共成都市委社会工作部会同市级有关部门。
+    </div>
+    <a class="doc-link" href="https://www.cdswshgzb.gov.cn/gsgg/2001883.html" target="_blank">📄 查看原文（成都市委社会工作部）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">绵阳</span>
+      <span>《绵阳市社区治理促进条例》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">绵阳市人民代表大会常务委员会</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2026年4月</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>明确市、县（市、区）人民政府应当加强社区信息化建设，<strong>统筹规划和推进智慧社区基础设施、系统平台和应用终端建设</strong>，运用互联网、物联网、大数据、人工智能等现代信息技术手段，提高社区治理的智能化水平。加强网络和数据安全管理，依法保护居民信息安全和个人隐私；推行适老化和无障碍信息服务。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>绵阳市及各县（市、区）人民政府。
+    </div>
+    <a class="doc-link" href="http://rd.my.gov.cn/mysrd/c100072/202604/c001c8816827459498523339a972d2fb.shtml" target="_blank">📄 查看原文（绵阳市人大常委会）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">德阳</span>
+      <span>《德阳市社区治理条例》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">德阳市人民代表大会常务委员会</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2026年</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>打造<strong>"好德行"数字治理平台</strong>，将社区服务搬到"云端"，设置"书记公开信""居民说事"等模块推动居民合理诉求"接诉即办"。居民通过数字化平台随时反映意见诉求，相关部门迅速响应、及时处理，真正做到"民有所呼，我有所应"。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>德阳市及各县（市、区）人民政府。
+    </div>
+    <a class="doc-link" href="http://www.scspc.gov.cn/jcrd/202604/t20260417_50373.html" target="_blank">📄 查看原文（四川省人大常委会）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">遂宁</span>
+      <span>《遂宁市"十四五"城乡基层治理规划》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">遂宁市人民政府</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2021年12月19日</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">遂府函〔2021〕177号</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>第六章专章部署<strong>以智治支撑打造基层治理新体验</strong>。建立数据汇集整合、开放共享的信息平台，形成上下贯通、高效联动的基层治理新体系。<strong>实施"互联网+社区"行动计划，推进智慧社区试点，建设"遂宁社区云"</strong>，实现智慧社区建设的安全性、服务性和可持续性发展。推进社区智能化升级改造。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>遂宁市各县（市、区）人民政府、市直园区管委会、市直各部门。
+    </div>
+    <a class="doc-link" href="https://www.suining.gov.cn/zhangzhe/zfxxgk/1331e4f7783a404f9068cf93ce74ecc9.html" target="_blank">📄 查看原文（遂宁市人民政府）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">眉山</span>
+      <span>《眉山市"十四五"城乡社区发展治理规划》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">眉山市</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2022年</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong><strong>实施智慧社区场景营造</strong>，加快推进智慧城市建设，创新智慧社区在社区治理和生活服务方面的多场景应用，重点推动智慧党建、政务、自治、教育、健康等多样化智慧社区场景营造，提升交通、应急、环保、综治、疫情防控等方面智慧化水平。开发社区党员"双报到"、政务办理、协商议事等网上社区服务项目。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>眉山市相关部门。
+    </div>
+    <a class="doc-link" href="https://www.ms.gov.cn/info/6050/1135238.htm" target="_blank">📄 查看原文（眉山市人民政府）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">广安</span>
+      <span>《广安市人民政府关于推动城市高质量发展的实施意见》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">广安市人民政府</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">—</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>推进完整社区建设，<strong>打造智慧社区、文化社区、健康社区</strong>，整合养老、托育、医疗、文化等功能，提供"一站式"服务。高质量打造一刻钟便民生活圈，强化公共服务多元供给，整合街道、社区、物业、商户等力量参与社区生活圈建设运营。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>广安市人民政府及相关部门。
+    </div>
+    <a class="doc-link" href="https://www.guang-an.gov.cn/gasrmzfw/c104244/pc/content/content_2084103504607821824.html" target="_blank">📄 查看原文（广安市人民政府）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">达州</span>
+      <span>《达州市"十四五"数字经济发展专项规划（2021—2025年）》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">达州市人民政府</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2021年</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>实施<strong>智慧社区推广工程</strong>，在全市157个社区推广建设智慧社区，采取个性化定制推广策略，打造"人文智慧社区""绿色智慧社区""红色智慧社区"等多个特色主题智慧社区。依托城市公共信息服务平台，建设"1+6+N"的社会治安防控体系新格局。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>达州市人民政府及相关部门。
+    </div>
+    <a class="doc-link" href="https://www.dazhou.gov.cn/news-show-226410.html" target="_blank">📄 查看原文（达州市人民政府）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">巴中</span>
+      <span>《巴中市恩阳区"十四五"城乡社区发展治理规划》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">巴中市恩阳区</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2021年</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>推进党建引领"五治"融合，<strong>探索社区智治支撑</strong>。顺应信息时代发展需要，加快推进智慧科学决策，推进"数字巴中"建设，将社区平安建设纳入"城市大脑"试点，<strong>试点"智慧社区"建设</strong>，建立"人、地、事、物、情"基础数据库及数据更新维护机制。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>巴中市恩阳区相关部门。
+    </div>
+    <a class="doc-link" href="https://www.scey.gov.cn/group2/M00/06/AA/rBUtIWRq6HKAQY0eAEJv1hi_wlU337.pdf" target="_blank">📄 下载原文PDF（恩阳区人民政府）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">雅安</span>
+      <span>《雅安市民政局 雅安市财政局关于组织实施2022年社会工作服务体系建设试点项目的通知》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">雅安市民政局、雅安市财政局</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2022年</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>组织实施社会工作服务体系建设试点项目。<strong>将"全国社会工作信息系统"作为站点运营和管理的重要工具</strong>，为社会工作服务站服务和管理提供信息化支撑，及时、常态化更新运营和服务信息。要求承接机构在系统中及时更新人员信息、服务对象信息等。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>雅安市民政局、各县（区）民政局。
+    </div>
+    <a class="doc-link" href="https://www.yaan.gov.cn/gongkai/show/68f4c7c2d82bb3d7ee7f9932cdd4b477.html" target="_blank">📄 查看原文（雅安市人民政府）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">南充</span>
+      <span>《南充市"十四五"城乡社区发展治理规划（2021—2025）》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">南充市人民政府办公室</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2022年7月</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>以<strong>科技赋能</strong>推进城乡社区发展治理。城市运行"一网统管"、政务服务"一网通办"综合实现率≥80%，全市住宅小区全部达到省级智慧安防小区建设标准的比例≥80%。深化智慧社区建设，有序推进智慧社区场景应用。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>南充市人民政府及相关部门。
+    </div>
+    <a class="doc-link" href="https://www.nanchong.gov.cn/zwgk/fdzdgknr/ghxx/zxgh/202207/P020220705653619655822.pdf" target="_blank">📄 下载原文PDF（南充市人民政府）</a>
+  </div>
+
+  <div class="doc-card city">
+    <div class="doc-title">
+      <span class="level-tag tag-city">自贡</span>
+      <span>《自贡市城乡社会治理网格化服务管理办法》</span>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-item"><span class="label">发文部门</span><span class="value">自贡市</span></div>
+      <div class="meta-item"><span class="label">发文时间</span><span class="value">2023年12月</span></div>
+      <div class="meta-item"><span class="label">文号</span><span class="value">—</span></div>
+    </div>
+    <div class="doc-summary">
+      <strong>摘要：</strong>以网格为基本服务管理单位，整合各方面力量，配备服务管理人员，<strong>综合运用人力资源、科技信息化等多种手段</strong>，提供服务和进行管理的社会治理活动。推动基层治理数字化、网格化、精细化。
+    </div>
+    <div class="doc-summary">
+      <strong>处置部门：</strong>自贡市相关部门。
+    </div>
+    <a class="doc-link" href="http://zgs.sczwfw.gov.cn/art/2023/12/22/art_15773_244118.html" target="_blank">📄 查看原文（自贡市政务服务网）</a>
+  </div>
+
+  <div class="footer">
+    <p>智慧社工平台相关政策文件汇编 | 数据来源：各级人民政府及民政部门官方网站</p>
+    <p>汇编时间：2026年10月 | 文件总数：23份（国家级7份 / 四川省级4份 / 市州级12份）</p>
+    <p style="margin-top:8px; font-size:0.8em; color:#bbb;">注：部分文件为征求意见稿或新闻报道引用，具体以官方发布的正式文件为准。</p>
+  </div>
+
+</div>
+
+</body>
+</html>
